@@ -20,45 +20,41 @@
     width: 90%;
     max-width: 400px;
   }
-  .logo {
-    width: 120px;
-    height: auto;
-    margin-bottom: 20px;
-  }
   h1 {
     font-size: 2rem;
     margin-bottom: 20px;
     color: #66b2ff;
   }
+  .link-section {
+    margin: 12px 0;
+    cursor: pointer;
+    border-radius: 30px;
+    background-color: #1a1a1a;
+    transition: background-color 0.2s, transform 0.2s;
+    padding: 12px 15px;
+  }
+  .link-section:hover {
+    background-color: #333333;
+    transform: scale(1.02);
+  }
   .link-btn {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 15px;
-    margin: 12px 0;
-    background-color: #1a1a1a;
-    color: #66b2ff;
-    text-decoration: none;
-    border-radius: 30px;
     font-weight: bold;
     font-size: 1rem;
-    cursor: pointer;
-    transition: background-color 0.2s, transform 0.2s;
+    color: #66b2ff;
   }
   .link-btn img {
     width: 24px;
     height: 24px;
     margin-right: 10px;
   }
-  .link-btn:hover {
-    background-color: #333333;
-    transform: scale(1.05);
-  }
   .description {
     font-size: 0.9rem;
-    color: #99cfff;
-    margin-bottom: 15px;
-    display: none; /* alapból rejtve */
+    color: #66b2ff; /* egységes szín a gombbal */
+    margin-top: 5px;
+    display: none;
   }
 </style>
 </head>
@@ -66,56 +62,50 @@
 <div class="container">
   <h1>Rewatch Store</h1>
 
-  <!-- Linktree gomb -->
-  <div class="link-section">
-    <div class="link-btn" onclick="toggleLink(this, 'https://linktr.ee/rewatchstorehu')">
+  <div class="link-section" onclick="toggleLink(this, 'https://linktr.ee/rewatchstorehu')">
+    <div class="link-btn">
       <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="Linktree Icon"> Linktree
     </div>
     <div class="description">All my links in one place</div>
   </div>
 
-  <!-- Vinted gomb -->
-  <div class="link-section">
-    <div class="link-btn" onclick="toggleLink(this, 'https://www.vinted.hu/member/223825429')">
+  <div class="link-section" onclick="toggleLink(this, 'https://www.vinted.hu/member/223825429')">
+    <div class="link-btn">
       <img src="https://upload.wikimedia.org/wikipedia/commons/0/0b/Vinted_logo.png" alt="Vinted Icon"> Vinted
     </div>
     <div class="description">Check out my watches and accessories for sale</div>
   </div>
 
-  <!-- Instagram gomb -->
-  <div class="link-section">
-    <div class="link-btn" onclick="toggleLink(this, 'https://www.instagram.com/rewatchstorehu')">
+  <div class="link-section" onclick="toggleLink(this, 'https://www.instagram.com/rewatchstorehu')">
+    <div class="link-btn">
       <img src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Instagram_logo_2016.svg" alt="Instagram Icon"> Instagram
     </div>
     <div class="description">Follow me for updates and posts</div>
   </div>
 
-  <!-- Rewatch Fix gomb -->
-  <div class="link-section">
-    <div class="link-btn" onclick="toggleLink(this, 'https://www.sumupbookings.com/rewatchstore')">
+  <div class="link-section" onclick="toggleLink(this, 'https://www.sumupbookings.com/rewatchstore')">
+    <div class="link-btn">
       <img src="https://upload.wikimedia.org/wikipedia/commons/8/85/SumUp_Logo.png" alt="Rewatch Fix Icon"> Rewatch Fix
     </div>
     <div class="description">Book watch repair services</div>
   </div>
 
-  <!-- TikTok gomb -->
-  <div class="link-section">
-    <div class="link-btn" onclick="toggleLink(this, 'https://www.tiktok.com/@rewatchstorehu')">
+  <div class="link-section" onclick="toggleLink(this, 'https://www.tiktok.com/@rewatchstorehu')">
+    <div class="link-btn">
       <img src="https://upload.wikimedia.org/wikipedia/en/0/0a/TikTok_logo.svg" alt="TikTok Icon"> TikTok
     </div>
     <div class="description">Watch my latest videos</div>
   </div>
+
 </div>
 
 <script>
-function toggleLink(button, url) {
-  const desc = button.nextElementSibling;
+function toggleLink(section, url) {
+  const desc = section.querySelector('.description');
   if(desc.style.display === 'block') {
-    // Ha már látszik, nyissuk meg a linket
-    window.open(url, '_blank');
+    window.open(url, '_blank'); // második kattintás: link
   } else {
-    // Először mutassuk meg a leírást
-    desc.style.display = 'block';
+    desc.style.display = 'block'; // első kattintás: mutassa a leírást
   }
 }
 </script>
