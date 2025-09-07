@@ -20,7 +20,6 @@
       width: 90%;
       max-width: 400px;
     }
-    /* Logó a tetején */
     .logo {
       width: 120px;
       height: auto;
@@ -32,20 +31,32 @@
       color: #66b2ff;
     }
     .link-btn {
-      display: block;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       padding: 15px;
-      margin: 12px 0;
-      background-color: #1a1a1a; /* sötét gomb */
-      color: #66b2ff; /* világoskék betű */
+      margin: 12px 0 5px 0;
+      background-color: #1a1a1a;
+      color: #66b2ff;
       text-decoration: none;
       border-radius: 30px;
       font-weight: bold;
       font-size: 1rem;
       transition: background-color 0.2s, transform 0.2s;
     }
+    .link-btn img {
+      width: 24px;
+      height: 24px;
+      margin-right: 10px;
+    }
     .link-btn:hover {
       background-color: #333333;
       transform: scale(1.05);
+    }
+    .description {
+      font-size: 0.9rem;
+      color: #99cfff;
+      margin-bottom: 15px;
     }
   </style>
 </head>
@@ -55,12 +66,37 @@
     <!-- <img src="LOGO_URL" alt="Rewatch Store Logo" class="logo"> -->
     
     <h1>Rewatch Store</h1>
-    
-    <a class="link-btn" href="https://linktr.ee/rewatchstorehu" target="_blank">Linktree</a>
-    <a class="link-btn" href="https://www.vinted.hu/member/223825429" target="_blank">Vinted</a>
-    <a class="link-btn" href="https://www.instagram.com/rewatchstorehu" target="_blank">Instagram</a>
-    <a class="link-btn" href="https://www.sumupbookings.com/rewatchstore" target="_blank">Rewatch Fix</a>
-    <a class="link-btn" href="https://www.tiktok.com/@rewatchstorehu" target="_blank">TikTok</a>
+
+    <a class="link-btn" href="https://linktr.ee/rewatchstorehu" target="_blank">
+      <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="Linktree Icon">
+      Linktree
+    </a>
+    <div class="description">All my links in one place</div>
+
+    <a class="link-btn" href="https://www.vinted.hu/member/223825429" target="_blank">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/0/0b/Vinted_logo.png" alt="Vinted Icon">
+      Vinted
+    </a>
+    <div class="description">Check out my watches and accessories for sale</div>
+
+    <a class="link-btn" href="https://www.instagram.com/rewatchstorehu" target="_blank">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Instagram_logo_2016.svg" alt="Instagram Icon">
+      Instagram
+    </a>
+    <div class="description">Follow me for updates and posts</div>
+
+    <a class="link-btn" href="https://www.sumupbookings.com/rewatchstore" target="_blank">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/8/85/SumUp_Logo.png" alt="Rewatch Fix Icon">
+      Rewatch Fix
+    </a>
+    <div class="description">Book watch repair services</div>
+
+    <a class="link-btn" href="https://www.tiktok.com/@rewatchstorehu" target="_blank">
+      <img src="https://upload.wikimedia.org/wikipedia/en/0/0a/TikTok_logo.svg" alt="TikTok Icon">
+      TikTok
+    </a>
+    <div class="description">Watch my latest videos</div>
   </div>
 </body>
 </html>
+
