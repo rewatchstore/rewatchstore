@@ -1,101 +1,123 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Rewatch Store – Links</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #000000; /* fekete háttér */
-      color: #66b2ff; /* világoskék szöveg */
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      margin: 0;
-    }
-    .container {
-      text-align: center;
-      width: 90%;
-      max-width: 400px;
-    }
-    .logo {
-      width: 120px;
-      height: auto;
-      margin-bottom: 20px;
-    }
-    h1 {
-      font-size: 2rem;
-      margin-bottom: 20px;
-      color: #66b2ff;
-    }
-    .link-btn {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 15px;
-      margin: 12px 0 5px 0;
-      background-color: #1a1a1a;
-      color: #66b2ff;
-      text-decoration: none;
-      border-radius: 30px;
-      font-weight: bold;
-      font-size: 1rem;
-      transition: background-color 0.2s, transform 0.2s;
-    }
-    .link-btn img {
-      width: 24px;
-      height: 24px;
-      margin-right: 10px;
-    }
-    .link-btn:hover {
-      background-color: #333333;
-      transform: scale(1.05);
-    }
-    .description {
-      font-size: 0.9rem;
-      color: #99cfff;
-      margin-bottom: 15px;
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rewatch Store – Links</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #000000;
+    color: #66b2ff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+  .container {
+    text-align: center;
+    width: 90%;
+    max-width: 400px;
+  }
+  .logo {
+    width: 120px;
+    height: auto;
+    margin-bottom: 20px;
+  }
+  h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #66b2ff;
+  }
+  .link-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    margin: 12px 0;
+    background-color: #1a1a1a;
+    color: #66b2ff;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.2s;
+  }
+  .link-btn img {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+  }
+  .link-btn:hover {
+    background-color: #333333;
+    transform: scale(1.05);
+  }
+  .description {
+    font-size: 0.9rem;
+    color: #99cfff;
+    margin-bottom: 15px;
+    display: none; /* alapból rejtve */
+  }
+</style>
 </head>
 <body>
-  <div class="container">
-    <!-- Logó a tetején, utólag hozzáadható -->
-    <!-- <img src="LOGO_URL" alt="Rewatch Store Logo" class="logo"> -->
-    
-    <h1>Rewatch Store</h1>
+<div class="container">
+  <h1>Rewatch Store</h1>
 
-    <a class="link-btn" href="https://linktr.ee/rewatchstorehu" target="_blank">
-      <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="Linktree Icon">
-      Linktree
-    </a>
+  <!-- Linktree gomb -->
+  <div class="link-section">
+    <div class="link-btn" onclick="toggleLink(this, 'https://linktr.ee/rewatchstorehu')">
+      <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="Linktree Icon"> Linktree
+    </div>
     <div class="description">All my links in one place</div>
+  </div>
 
-    <a class="link-btn" href="https://www.vinted.hu/member/223825429" target="_blank">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/0/0b/Vinted_logo.png" alt="Vinted Icon">
-      Vinted
-    </a>
+  <!-- Vinted gomb -->
+  <div class="link-section">
+    <div class="link-btn" onclick="toggleLink(this, 'https://www.vinted.hu/member/223825429')">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/0/0b/Vinted_logo.png" alt="Vinted Icon"> Vinted
+    </div>
     <div class="description">Check out my watches and accessories for sale</div>
+  </div>
 
-    <a class="link-btn" href="https://www.instagram.com/rewatchstorehu" target="_blank">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Instagram_logo_2016.svg" alt="Instagram Icon">
-      Instagram
-    </a>
+  <!-- Instagram gomb -->
+  <div class="link-section">
+    <div class="link-btn" onclick="toggleLink(this, 'https://www.instagram.com/rewatchstorehu')">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Instagram_logo_2016.svg" alt="Instagram Icon"> Instagram
+    </div>
     <div class="description">Follow me for updates and posts</div>
+  </div>
 
-    <a class="link-btn" href="https://www.sumupbookings.com/rewatchstore" target="_blank">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/8/85/SumUp_Logo.png" alt="Rewatch Fix Icon">
-      Rewatch Fix
-    </a>
+  <!-- Rewatch Fix gomb -->
+  <div class="link-section">
+    <div class="link-btn" onclick="toggleLink(this, 'https://www.sumupbookings.com/rewatchstore')">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/8/85/SumUp_Logo.png" alt="Rewatch Fix Icon"> Rewatch Fix
+    </div>
     <div class="description">Book watch repair services</div>
+  </div>
 
-    <a class="link-btn" href="https://www.tiktok.com/@rewatchstorehu" target="_blank">
-      <img src="https://upload.wikimedia.org/wikipedia/en/0/0a/TikTok_logo.svg" alt="TikTok Icon">
-      TikTok
-    </a>
+  <!-- TikTok gomb -->
+  <div class="link-section">
+    <div class="link-btn" onclick="toggleLink(this, 'https://www.tiktok.com/@rewatchstorehu')">
+      <img src="https://upload.wikimedia.org/wikipedia/en/0/0a/TikTok_logo.svg" alt="TikTok Icon"> TikTok
+    </div>
     <div class="description">Watch my latest videos</div>
   </div>
+</div>
+
+<script>
+function toggleLink(button, url) {
+  const desc = button.nextElementSibling;
+  if(desc.style.display === 'block') {
+    // Ha már látszik, nyissuk meg a linket
+    window.open(url, '_blank');
+  } else {
+    // Először mutassuk meg a leírást
+    desc.style.display = 'block';
+  }
+}
+</script>
 </body>
 </html>
