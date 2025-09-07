@@ -1,16 +1,1 @@
-{
-  "redirects": [
-    {
-      "source": "/",
-      "has": [{ "type": "host", "value": "rewatchstore.hu" }],
-      "destination": "https://rewatchstore.com",
-      "permanent": true
-    },
-    {
-      "source": "/",
-      "has": [{ "type": "host", "value": "rewatchstore.com" }],
-      "destination": "https://linktr.ee/rewatchstorehu",
-      "permanent": true
-    }
-  ]
-}
+
